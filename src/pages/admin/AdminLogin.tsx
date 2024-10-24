@@ -87,7 +87,9 @@ const AdminLogin:React.FC = () => {
 
 
   return (
-    <div className="flex justify-center items-center">
+    // <div className="flex justify-center items-center">
+    <div className="md:min-h-[600px]  md:max-w-[600px] flex justify-center items-center bg-gradient-to-r mx-auto  from-green-200  from-purple-300-300 rounded-3xl border-4">
+     
        <MyCard title="Login" description="" footer="">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -138,6 +140,7 @@ const AdminLogin:React.FC = () => {
       </Form>
     </MyCard>
     </div>
+  
   );
 };
 

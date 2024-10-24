@@ -176,9 +176,9 @@ const MainNav = () => {
   return (
     <div className="w-full flex justify-between items-center">
       <div className="flex gap-10">
-        <Link to="/" className="font-bold">Home</Link>
+        {/* <Link to="/" className="font-bold">Home</Link>
         <Link to="/" className="font-bold">About</Link>
-        <Link to="/" className="font-bold">Contact Us</Link>
+        <Link to="/" className="font-bold">Contact Us</Link> */}
       </div>
 
       <div className="flex gap-3 items-center">

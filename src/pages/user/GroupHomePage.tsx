@@ -24,7 +24,7 @@ interface LocationState {
 }
 
 const GroupHomePage = () => {
-    const { userId } = useAuth();
+    const { userId="",username="" } = useAuth();
     const location = useLocation();
     const state = location.state as LocationState;
     const { group } = state;
@@ -34,6 +34,10 @@ const GroupHomePage = () => {
 
     
     const handleChatClick = () => {
+        if (!userId) {
+            alert('You need to log in to access the chat.');
+            return;
+          }
         if (data?.isMember) {
             setIsModalOpen(true);
         } else {
@@ -75,18 +79,16 @@ const GroupHomePage = () => {
             </div>
 
             {isModalOpen && (
-                <div className="fixed inset-y-0 right-0 w-[600px] flex items-center justify-center z-50 bg-black bg-opacity-50">
-                    <div className="bg-white rounded-lg p-6 w-3/4 h-full">
-                        <div className="flex justify-end">
+                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                 <div className="bg-white rounded-lg w-[600px] h-[95vh] flex flex-col">
+                   <div className="flex justify-end p-4">
                             <button onClick={handleCloseModal} className="text-gray-500 hover:text-gray-800">
                             <MessageSquareX/>
                             </button>
                         </div>
-                        <div className="h-full overflow-auto">
-                            {/* Replace this with your group chat component
-                            <h2 className="text-2xl font-bold mb-4">Group Chat</h2>
-                            <p>Group chat component goes here.</p> */}
-                            <GroupChat/>
+                        <div className="flex-grow overflow-y-auto p-4">
+                           
+                            <GroupChat groupId={group._id} groupName={group.name} userId={userId} userName={username}/>
                         </div>
                     </div>
                 </div>

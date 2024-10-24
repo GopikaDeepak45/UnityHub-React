@@ -92,12 +92,20 @@ return (
               </button>
             )}
             {connectionStatus === 'declined' && (
+              <>
               <button
                 className="px-4 py-2 rounded cursor-default bg-red-500 text-white"
                 
               >
                 {connectionStatus.charAt(0).toUpperCase() + connectionStatus.slice(1)}
               </button>
+              <button
+                className="px-4 py-2 rounded bg-blue-500 hover:bg-blue-700 text-white"
+                onClick={() => handleConnect(user._id)}
+              >
+                Connect
+              </button>
+              </>
             )}
           </div>
         );

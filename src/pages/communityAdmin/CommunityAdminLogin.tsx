@@ -3,7 +3,7 @@ import { useEffect} from "react";
 import { useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
 "use client";
-
+import img from '../../assets/pic1.png'
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -112,7 +112,8 @@ const CommAdminLogin:React.FC = () => {
 
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="md:min-h-[600px]  md:max-w-[600px] flex items-center justify-center bg-cover bg-center mx-auto" style={{ backgroundImage: `url(${img})` }}>
+
        <MyCard title="Login" description="" footer="">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">

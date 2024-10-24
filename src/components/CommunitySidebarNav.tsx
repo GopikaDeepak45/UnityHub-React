@@ -69,12 +69,12 @@ const CommunitySidebarNav = () => {
         </div>
       )}
       {/* Photos */}
-      <AlertDialog open={photosOpen} onOpenChange={setPhotosOpen}>
+      {/* <AlertDialog open={photosOpen} onOpenChange={setPhotosOpen}>
         <AlertDialogTrigger asChild>
           <Button onClick={() => setPhotosOpen(true)} className="rounded-3xl bg-slate-400 hover:bg-slate-600">Media</Button>
         </AlertDialogTrigger>
         {photosOpen && <CommunityPhotos />}
-      </AlertDialog>
+      </AlertDialog> */}
 
       {/* Videos
       <AlertDialog open={videosOpen} onOpenChange={setVideosOpen}>
