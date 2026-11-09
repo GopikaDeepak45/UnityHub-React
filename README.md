@@ -106,11 +106,11 @@ The frontend requires a running backend for authentication, data retrieval, and 
 
 Screenshots of the dashboards, community features, and messaging interfaces will be added.
 
-## 🔗 Backend
+## 🔗 Backend Repository
 
-UnityHub uses a separate backend application for APIs, authentication, database operations, and real-time communication.
+UnityHub uses a separate backend built with Node.js, Express.js, TypeScript, MongoDB, and Socket.IO.
 
-Backend repository documentation will be linked here after review.
+**Backend:** [UnityHub-Node](https://github.com/GopikaDeepak45/UnityHub-Node)
 
 ## 👩‍💻 Developer
 
